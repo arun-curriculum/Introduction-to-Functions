@@ -12,7 +12,7 @@ We will be looking at two different ways to create functions, how we apply them,
 
 ```javascript
 function sayHello() {
-	alert("Hello World!");
+	console.log("Hello World!");
 }
 ```
 
@@ -31,7 +31,7 @@ sayHello();
 ### Parameters
 
 - Parameters are data that are set up to work with the intended function.
-- An example is a `name` parameter we will use to represent the name that we want to display in the alert:
+- An example is a `name` parameter we will use to represent the name that we want to display in the console:
 
 ```javascript
 function sayHello(name) { ... }
@@ -42,7 +42,7 @@ function sayHello(name) { ... }
 
 ```javascript
 function sayHello(name) {
-	alert("Hello " + name + "!");
+	console.log("Hello " + name + "!");
 }
 ```
 
@@ -61,7 +61,7 @@ sayHello("Arun");
 sayHello("Maria");
 ```
 
-- We should now see two alerts - one for Arun and one for Maria.
+- We should now see two console entries - one for Arun and one for Maria.
 
 ## Function Expression
 
@@ -70,7 +70,7 @@ sayHello("Maria");
 
 ```javascript
 var sayHello = function(name) {
-	alert("Hello " + name + "!");
+	console.log("Hello " + name + "!");
 }
 ```
 
@@ -92,7 +92,7 @@ Function declaration:
 sayHello("Arun"); // Works!
 
 function sayHello(name) {
-	alert("Hello " + name + "!");
+	console.log("Hello " + name + "!");
 }
 ```
 
@@ -102,6 +102,12 @@ Function expression:
 sayHello("Arun"); // Uncaught TypeError: sayHello is not a function
 
 var sayHello = function(name) {
-	alert("Hello " + name + "!");
+	console.log("Hello " + name + "!");
 }
 ```
+
+## Function Lab 1: Writing Functions
+
+- In this lab we will practice writing functions as declarations and expressions.
+- Step 1: Write a function declaration that takes in two parameters (num1, num2) and logs to the console the sum.
+- Step 2: Take the same logic from above and write your function as an expression.
