@@ -111,3 +111,26 @@ var sayHello = function(name) {
 - In this lab we will practice writing functions as declarations and expressions.
 - Step 1: Write a function declaration that takes in two parameters (num1, num2) and logs to the console the sum.
 - Step 2: Take the same logic from above and write your function as an expression.
+
+## Return Statements
+
+- Return statements allow values that are created inside of functions to exit and become useful in the rest of the application's logic.
+- Let's take an example of our Hello World function:
+
+```javascript
+var sayHello = function(name) {
+	return "Hello " + name + "!";
+}
+
+var output = sayHello("Arun");
+
+console.log(output);
+```
+
+- Notice that I can now assign the data leaving the function to a variable, and I can use these data elsewhere.
+
+
+## Discussion
+
+- How can we apply a return statement to our sum function?
+- How does a return statement change the operation of the function? What benefit does it serve?
