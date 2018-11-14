@@ -47,8 +47,9 @@ function sayHello(name) {
 ```
 
 - This function is now capable of saying "Hello {anyone's name}!".
+- If you need to use multiple parameters, just add them to the definition comma-separated.
 
-## Arguments
+### Arguments
 
 - When you pass data to a function that is expecting a certain parameter, it is called an "argument".
 - In the case of our `sayHello` function, the parameter is `name` and the argument is the value for `name` that we provide upon calling the function.
@@ -61,3 +62,46 @@ sayHello("Maria");
 ```
 
 - We should now see two alerts - one for Arun and one for Maria.
+
+## Function Expression
+
+- Function expression looks similar to function declaration, but it represents an important difference.
+- In function expression, functions are assigned to variables:
+
+```javascript
+var sayHello = function(name) {
+	alert("Hello " + name + "!");
+}
+```
+
+- Calling these functions is done the same way:
+
+```javascript
+sayHello("Arun");
+
+sayHello("Maria");
+```
+
+- The main difference between function declaration and function expression is scope.
+- Declared function definitions are automatically pushed up (or "hoisted") to the top of their current scope, whereas function expressions are not.
+- Let's see two examples:
+
+Function declaration:
+
+```javascript
+sayHello("Arun"); // Works!
+
+function sayHello(name) {
+	alert("Hello " + name + "!");
+}
+```
+
+Function expression:
+
+```javascript
+sayHello("Arun"); // Uncaught TypeError: sayHello is not a function
+
+var sayHello = function(name) {
+	alert("Hello " + name + "!");
+}
+```
